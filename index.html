@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/style.css">
 </head>
-<body>
-    <h1>Acerte o número secreto!</h1>
+<body class="container">
+    <h1 class="container__titulo">Acerte o número secreto!</h1>
 
-    <h3>O número secreto está entre <span id="menor-valor">0</span> e <span id="maior-valor">100</span></h3>
+    <h3 class="container__subtitulo">O número secreto está entre <span id="menor-valor">0</span> e <span id="maior-valor">100</span></h3>
 
-    <div id="chute" class="mensagem">
+    <div id="chute" class="container__mensagem">
         <div>Você disse:</div>
-        <span class="box">20</span>
+        <span class="container__mensagem--box">20</span>
         <div>O número secreto é maior <i class="fa-solid fa-arrow-up"></i></div>
 
     </div>

@@ -3,7 +3,40 @@
 :root {
     --fonte-principal: 'Montserrat', sans-serif;
 
-    --cor-primaria: #8FE3CF;
-    --cor-fundo: #002B5B;
+    --cor-primaria: #DFF6FF;
+    --cor-fundo: #1363DF;
 }
 
+.container {
+    align-items: center;
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fonte-principal);
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container__titulo {
+    font-size: 4em;
+}
+
+.container__subtitulo {
+    font-size: 2em;
+    margin-top: 0.8em;
+}
+
+.container__mensagem {
+    font-size: 1.5em;
+    margin-top: 2em;
+}
+
+.container__mensagem--box {
+    border: 2px solid var(--cor-primaria);
+    display: inline-block;
+    font-size: 3em;
+    padding: 0.2em;
+    margin: 0.5em;
+}
