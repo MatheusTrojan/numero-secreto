@@ -2,8 +2,19 @@ function validaChute(chute) {
     const numero = +chute
 
     if (chuteInvalido(numero)) {
-        elementoChute.innerHTML += "<div>Valor inválido</div>"
-        return
+        if (chute.toUpperCase() === "GAME OVER") {
+
+            document.body.innerHTML =
+                `
+                <h2 class="container__titulo">Game Over!!!</h2>
+                <h3 class="container__subtitulo">Pressione o botão para jogar novamente</h3>
+                <button id="jogar-novamente" class="btn-jogar" >Jogar novamente</button>
+                `
+                document.body.style.backgroundColor = "black";
+        } else {
+
+            elementoChute.innerHTML += '<div>Valor Inválido</div>';
+        }
     }
 
     if (numeroMaiorQuePermitido(numero)) {
@@ -15,6 +26,8 @@ function validaChute(chute) {
         document.body.innerHTML = `
             <h2 class="container__titulo">Você acertou!!</h2>
             <h3 class="container__subtitulo">O número secreto era ${numeroSecreto}!</h3>
+
+            <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button>
         `
     } else if (numero > numeroSecreto) {
         elementoChute.innerHTML += `
@@ -35,3 +48,9 @@ function chuteInvalido(numero) {
 function numeroMaiorQuePermitido(numero) {
     return numero > maiorValor || numero < menorValor
 }
+
+document.body.addEventListener('click', e => {
+    if (e.target.id == 'jogar-novamente') {
+        window.location.reload()
+    }
+})
